@@ -1,8 +1,0 @@
-language: csharp
-solution: ContosoUniversity.sln
-install:
-  - nuget restore ContosoUniversity.sln
-  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
-script:
-  - xbuild /p:Configuration=Release ContosoUniversity.sln
-  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./ContosoUniversity.Test/bin/Release/ContosoUniversity.Test.dll
